@@ -6,6 +6,8 @@ def mostra_messaggi_con_ritardo():
     # Mostra il messaggio di benvenuto
     messaggio = st.empty()
     time.sleep(2)
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
 
     messaggio.write("Benvenuto nella Magic Ball!")
     time.sleep(3)  # Attendi 2 secondi
