@@ -22,11 +22,20 @@ def mostra_messaggi_con_ritardo():
 
     
     
-# Titolo dell'app
-st.title("✨ Magic Ball! Prima Bozza✨")
+# Funzione principale
+def main():
+    # Titolo dell'app
+    st.title("✨ Magic Ball! Prima Bozza✨")
 
-# Bottone per avviare l'interazione
-mostra_messaggi_con_ritardo()
-# Scelta dell'azione
-st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+    # Mostra i messaggi iniziali
+    mostra_messaggi_con_ritardo()
+
+    # Scelta dell'azione in una schermata separata
+    scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+
+
+
+if __name__ == "__main__":
+    main()
+
 
