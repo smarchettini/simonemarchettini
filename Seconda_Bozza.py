@@ -74,33 +74,5 @@ st.title("✨ Magic Ball! ✨")
 # Bottone per avviare l'interazione
 mostra_messaggi_con_ritardo()
 # Scelta dell'azione
-scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
 
-# Suggerimenti per le domande
-if scelta == "Futuro":
-    st.write("💡 Esempi di domande:")
-    for esempio in suggerisci_domanda("futuro"):
-        st.write(f"- {esempio}")
-    domanda = st.text_input("Fai una domanda sul futuro:")
-    
-    if st.button("Chiedi alla Magic Ball"):
-        if domanda.strip() == "":
-            st.warning("Per favore, inserisci una domanda!")
-        else:
-            crea_suspense()
-            risposta = random.choice(risposte_futuro)
-            st.success(f"🎉 La Magic Ball dice: {risposta}")
-
-elif scelta == "Simone":
-    st.write("💡 Esempi di domande:")
-    for esempio in suggerisci_domanda("simone"):
-        st.write(f"- {esempio}")
-    domanda = st.text_input("Fai una domanda su Simone:")
-    
-    if st.button("Chiedi alla Magic Ball"):
-        if domanda.strip() == "":
-            st.warning("Per favore, inserisci una domanda!")
-        else:
-            crea_suspense()
-            risposta = random.choice(risposte_simone)
-            st.success(f"🎉 La Magic Ball dice: {risposta}")
