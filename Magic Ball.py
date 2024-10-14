@@ -1,7 +1,8 @@
+import streamlit as st
 import random
 import time
 
-# Lista di risposte per domande sul futuro
+# Liste di risposte
 risposte_futuro = [
     "Sì, sicuramente. 🚀",
     "Non so, chiedi di nuovo. 🤔",
@@ -15,13 +16,12 @@ risposte_futuro = [
     "Certo, perché no? 👍"
 ]
 
-# Lista di risposte per domande su Simone
 risposte_simone = [
-    "Non molto, ma ha un grande potenziale! 🤔",  # Leggermente negativa
-    "Abbastanza, ma c'è spazio per crescere! 📈",  # Neutra
-    "Sì, decisamente! 👍",  # Positiva
-    "Molto, è un valore aggiunto! 🌟",  # Positiva
-    "Assolutamente, non ti deluderà! 🚀"  # Estremamente positiva
+    "Non molto, ma ha un grande potenziale! 🤔",
+    "Abbastanza, ma c'è spazio per crescere! 📈",
+    "Sì, decisamente! 👍",
+    "Molto, è un valore aggiunto! 🌟",
+    "Assolutamente, non ti deluderà! 🚀"
 ]
 
 # Funzione per suggerire domande
@@ -45,92 +45,46 @@ def suggerisci_domanda(tipo):
 
 # Funzione per creare suspense
 def crea_suspense():
-    print("\n🎱 La Magic Ball sta pensando", end="")
-    time.sleep(1.5)
-    for _ in range(4):
-        print(".", end="", flush=True)
-        time.sleep(1)
+    with st.spinner("🎱 La Magic Ball sta pensando..."):
+        time.sleep(2)
 
-# Funzione principale del gioco
-def magic_ball():
-    print("\n✨ Benvenuto nella Magic Ball! ✨")
-    time.sleep(2)
+# Interfaccia Streamlit
+st.title("✨ Benvenuto nella Magic Ball! ✨")
+
+# Spiegazione iniziale
+st.write("Puoi fare una domanda sul futuro o chiedere informazioni su Simone!")
+
+# Scelta dell'azione
+scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+
+# Suggerimenti per le domande
+if scelta == "Futuro":
+    st.write("💡 Esempi di domande:")
+    for esempio in suggerisci_domanda("futuro"):
+        st.write(f"- {esempio}")
+    domanda = st.text_input("Fai una domanda sul futuro:")
     
-    print("\n1️⃣ Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
-    time.sleep(4)
-    print("2️⃣ Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
-    time.sleep(4)
-    print("3️⃣ Vuoi uscire dal gioco?")
-    time.sleep(2)
-
-    scelta = input("➡️ Seleziona un'opzione (1, 2 o 3): ")
-
-    if scelta == "1":
-        print("\n❓ Fai una domanda sul futuro.")
-        time.sleep(2)
-        print("💡 Esempi di domande: ")
-        for esempio in suggerisci_domanda("futuro"):
-            print(f"- {esempio}")
-        domanda = input("\nInserisci la tua domanda: ")
-        risposta = random.choice(risposte_futuro)
-        crea_suspense()
-        print(f"\n🎉 La Magic Ball dice: {risposta}")
-
-    elif scelta == "2":
-        print("\n❓ Fai una domanda su Simone.")
-        time.sleep(2)
-        print("💡 Esempi di domande: ")
-        for esempio in suggerisci_domanda("simone"):
-            print(f"- {esempio}")
-        domanda = input("\nInserisci la tua domanda: ")
-        risposta = random.choice(risposte_simone)
-        crea_suspense()
-        print(f"\n🎉 La Magic Ball dice: {risposta}")
-
-    elif scelta == "3":
-        print("Grazie per aver giocato! A presto! 👋")
-
-    else:
-        print("⚠️ Opzione non valida. Riprova.")
-        
-    while True:
-        # Ripetizione dell'interazione
-        time.sleep(2)
-        print("\nCosa vuoi fare ora?")
-        print("1️⃣ Fai una domanda sul futuro.")
-        print("2️⃣ Fai una domanda su Simone.")
-        print("3️⃣ Esci dal gioco.")
-        
-        scelta = input("➡️ Seleziona un'opzione (1, 2 o 3): ")
-        
-        if scelta == "1":
-            print("\n❓ Fai una domanda sul futuro.")
-            time.sleep(2)
-            print("💡 Esempi di domande: ")
-            for esempio in suggerisci_domanda("futuro"):
-                print(f"- {esempio}")
-            domanda = input("\nInserisci la tua domanda: ")
-            risposta = random.choice(risposte_futuro)
-            crea_suspense()
-            print(f"\n🎉 La Magic Ball dice: {risposta}")
-        
-        elif scelta == "2":
-            print("\n❓ Fai una domanda su Simone.")
-            time.sleep(2)
-            print("💡 Esempi di domande: ")
-            for esempio in suggerisci_domanda("simone"):
-                print(f"- {esempio}")
-            domanda = input("\nInserisci la tua domanda: ")
-            risposta = random.choice(risposte_simone)
-            crea_suspense()
-            print(f"\n🎉 La Magic Ball dice: {risposta}")
-        
-        elif scelta == "3":
-            print("Grazie per aver giocato! A presto! 👋")
-            break
-        
+    if st.button("Chiedi alla Magic Ball"):
+        if domanda.strip() == "":
+            st.warning("Per favore, inserisci una domanda!")
         else:
-            print("⚠️ Opzione non valida. Riprova.")
+            crea_suspense()
+            risposta = random.choice(risposte_futuro)
+            st.success(f"🎉 La Magic Ball dice: {risposta}")
 
-# Avvia il gioco
-magic_ball()
+elif scelta == "Simone":
+    st.write("💡 Esempi di domande:")
+    for esempio in suggerisci_domanda("simone"):
+        st.write(f"- {esempio}")
+    domanda = st.text_input("Fai una domanda su Simone:")
+    
+    if st.button("Chiedi alla Magic Ball"):
+        if domanda.strip() == "":
+            st.warning("Per favore, inserisci una domanda!")
+        else:
+            crea_suspense()
+            risposta = random.choice(risposte_simone)
+            st.success(f"🎉 La Magic Ball dice: {risposta}")
+
+# Opzione per uscire dal gioco
+st.write("Quando hai finito, chiudi la pagina per terminare il gioco! 👋")
