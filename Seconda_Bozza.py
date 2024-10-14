@@ -6,7 +6,7 @@ import random
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
     messaggio = st.empty()
-
+    time.sleep(2)  # Attendi 2 secondi
     # Mostra il messaggio di benvenuto
     messaggio.write("Benvenuto nella Magic Ball!")
     time.sleep(3)  # Attendi 2 secondi
