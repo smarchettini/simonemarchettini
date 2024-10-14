@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 import random
-
+ 
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
