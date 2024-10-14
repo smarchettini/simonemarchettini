@@ -17,6 +17,7 @@ def mostra_messaggi_con_ritardo():
     # Mostra il secondo messaggio e aspetta 3 secondi
     st.empty().write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
     time.sleep(6)
+    st.empty()
     
 
 # Funzione principale
