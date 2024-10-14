@@ -2,10 +2,11 @@
 import streamlit as st
 import time
 import random
-messaggio_1 = st.empty()
+
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
+    messaggio_1 = st.empty()
     time.sleep(2)
     messaggio_1.write("Benvenuto nella Magic Ball!")
     time.sleep(3)
