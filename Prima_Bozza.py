@@ -6,18 +6,20 @@ import random
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
-    messaggio_1 = st.empty()
+    messaggio = st.empty()
     time.sleep(2)
-    messaggio_1.write("Benvenuto nella Magic Ball!")
-    time.sleep(3)
+    # Mostra il messaggio di benvenuto
+    messaggio.write("Benvenuto nella Magic Ball!")
+    time.sleep(3)  # Attendi 2 secondi
 
-    # Mostra il primo messaggio e aspetta 4 secondi
-    messaggio_1.write("Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
+    # Mostra il primo messaggio e aspetta 3 secondi
+    messaggio.write("Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(6)
 
-    # Mostra il secondo messaggio e aspetta 4 secondi
-    messaggio_1.write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
+    # Mostra il secondo messaggio e aspetta 3 secondi
+    messaggio.write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
     time.sleep(6)
+    messaggio.empty()
 
 
     
