@@ -5,6 +5,11 @@ import time
 def mostra_messaggi_con_ritardo():
     # Mostra il messaggio di benvenuto
     messaggio = st.empty()
+    st.write("
+    
+             
+             
+             ")
     messaggio.write("Benvenuto nella Magic Ball!")
     time.sleep(2)  # Attendi 2 secondi
 
@@ -22,7 +27,7 @@ def mostra_messaggi_con_ritardo():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Seconda Bozza✨")
+    st.title("✨ Magic Ball! Prima Bozza✨")
 
     # Mostra i messaggi iniziali
     mostra_messaggi_con_ritardo()
