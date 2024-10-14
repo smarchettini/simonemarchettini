@@ -29,6 +29,8 @@ def main():
 
     st.write("")  # Prima riga vuota
     st.write("")  # Seconda riga vuota
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
 
     # Mostra i messaggi iniziali
     mostra_messaggi_con_ritardo()
