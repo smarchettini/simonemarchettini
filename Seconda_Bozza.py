@@ -69,7 +69,7 @@ def crea_suspense():
     
     
 # Titolo dell'app
-st.title("✨ Magic Ball! ✨")
+st.title("✨ Magic Ball! Seconda Bozza✨")
 
 # Bottone per avviare l'interazione
 mostra_messaggi_con_ritardo()
