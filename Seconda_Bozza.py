@@ -20,4 +20,4 @@ def mostra_messaggi_con_ritardo():
 st.title("Interazione sequenziale in Streamlit")
 
 # Bottone per avviare l'interazione
-    mostra_messaggi_con_ritardo()
+mostra_messaggi_con_ritardo()
