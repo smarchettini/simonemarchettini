@@ -4,6 +4,7 @@ import time
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
+    time.sleep(4)
     messaggio_1 = st.empty()
     messaggio_2 = st.empty()
 
@@ -19,5 +20,4 @@ def mostra_messaggi_con_ritardo():
 st.title("Interazione sequenziale in Streamlit")
 
 # Bottone per avviare l'interazione
-if st.button("Inizia"):
-    mostra_messaggi_con_ritardo()
+mostra_messaggi_con_ritardo()
