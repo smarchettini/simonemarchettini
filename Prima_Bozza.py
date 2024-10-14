@@ -1,13 +1,12 @@
-
 import streamlit as st
 import time
 import random
-
+messaggio = st.empty()
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
     # Riserva uno spazio per aggiornare i messaggi
-    messaggio = st.empty()
-    time.sleep(2)
+    
+    time.sleep(2)  # Attendi 2 secondi
     # Mostra il messaggio di benvenuto
     messaggio.write("Benvenuto nella Magic Ball!")
     time.sleep(3)  # Attendi 2 secondi
@@ -21,13 +20,10 @@ def mostra_messaggi_con_ritardo():
     time.sleep(6)
     messaggio.empty()
 
-
-    
-    
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Prima Bozza✨")
+    st.title("✨ Magic Ball! Seconda Bozza✨")
 
     # Mostra i messaggi iniziali
     mostra_messaggi_con_ritardo()
@@ -39,5 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
