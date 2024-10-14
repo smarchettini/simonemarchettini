@@ -23,7 +23,7 @@ def mostra_messaggi_con_ritardo():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Seconda Bozza✨")
+    st.title("✨ Magic Ball! Prima Bozza✨")
 
     # Mostra i messaggi iniziali
     mostra_messaggi_con_ritardo()
