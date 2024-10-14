@@ -2,10 +2,22 @@ import streamlit as st
 import time
 
 # Funzione per mostrare i messaggi con ritardo
-def mostra_messaggi_con_ritardo(messaggio):
-    # Riserva uno spazio per aggiornare i messaggi
-    st.empty().write(messaggio)
-    time.sleep(2)
+def mostra_messaggi_con_ritardo():
+    # Mostra il messaggio di benvenuto
+    messaggio = st.empty()
+    messaggio.write("Benvenuto nella Magic Ball!")
+    time.sleep(2)  # Attendi 2 secondi
+
+    # Mostra il primo messaggio e aspetta 3 secondi
+    messaggio.write("Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
+    time.sleep(3)
+
+    # Mostra il secondo messaggio e aspetta 3 secondi
+    messaggio.write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
+    time.sleep(3)
+
+    # Pulisci lo spazio
+    messaggio.empty()  # Rimuove il contenuto precedente
 
 # Funzione principale
 def main():
@@ -13,19 +25,12 @@ def main():
     st.title("✨ Magic Ball! Seconda Bozza✨")
 
     # Mostra i messaggi iniziali
-    messaggio_1 = "Benvenuto nella Magic Ball!"
-    mostra_messaggi_con_ritardo(messaggio_1)
+    mostra_messaggi_con_ritardo()
 
-    messaggio_2 = "Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!"
-    mostra_messaggi_con_ritardo(messaggio_2)
+    # Spazio vuoto per separare i messaggi iniziali dalla scelta
+    st.write("")  # Crea uno spazio vuoto
 
-    messaggio_3 = "Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!"
-    mostra_messaggi_con_ritardo(messaggio_3)
-
-    # Pulisci la schermata
-    st.empty()  # Questo ripulirà l'area dei messaggi
-
-    # Scelta dell'azione
+    # Scelta dell'azione in una schermata separata
     scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
 
     # Pulsante per avviare l'interazione
