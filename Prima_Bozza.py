@@ -110,5 +110,10 @@ def main():
                 crea_suspense()
                 risposta = random.choice(risposte_simone)
                 st.success(f"🎉 La Magic Ball dice: {risposta}")
+
+    if st.button("Esci dal gioco"):
+        st.write("Grazie per aver giocato! 🎱✨")
+        st.stop()  # Ferma l'esecuzione dell'app
+        
 if __name__ == "__main__":
     main()
