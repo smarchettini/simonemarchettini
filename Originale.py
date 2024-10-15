@@ -85,6 +85,10 @@ elif scelta == "Simone":
             crea_suspense()
             risposta = random.choice(risposte_simone)
             st.success(f"🎉 La Magic Ball dice: {risposta}")
+        # Bottone per chiudere il gioco
+    if st.button("Esci dal gioco"):
+        st.write("Grazie per aver giocato! 🎱✨")
+        st.stop()  # Ferma l'esecuzione dell'app
 
 # Opzione per uscire dal gioco
 st.write("Quando hai finito, chiudi la pagina per terminare il gioco! 👋")
