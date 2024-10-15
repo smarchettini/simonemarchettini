@@ -90,9 +90,6 @@ def main():
 
     # Suggerimenti per le domande
     if scelta == "Futuro":
-        st.write("💡 Esempi di domande:")
-        for esempio in suggerisci_domanda("futuro"):
-            st.write(f"- {esempio}")
         domanda = st.text_input("Fai una domanda sul futuro:")
         
         if st.button("Chiedi alla Magic Ball"):
@@ -104,9 +101,6 @@ def main():
                 st.success(f"🎉 La Magic Ball dice: {risposta}")
     
     elif scelta == "Simone":
-        st.write("💡 Esempi di domande:")
-        for esempio in suggerisci_domanda("simone"):
-            st.write(f"- {esempio}")
         domanda = st.text_input("Fai una domanda su Simone:")
         
         if st.button("Chiedi alla Magic Ball"):
