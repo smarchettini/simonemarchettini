@@ -64,9 +64,7 @@ def suggerisci_domanda(tipo):
 # Funzione per creare suspense
 def crea_suspense():
     with st.spinner("🎱 La Magic Ball sta pensando..."):
-        for i in range(4):
-            time.sleep(1)
-            st.progress(i + 1)
+        time.sleep(4)
 
 # Funzione per chiudere il gioco
 def chiudi_gioco():
