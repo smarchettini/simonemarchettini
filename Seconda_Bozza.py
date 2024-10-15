@@ -73,7 +73,7 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Prima Bozza ✨")
+    st.title("✨ Magic Ball! Seconda Bozza ✨")
 
     # Controlla se il gioco è attivo
     if st.session_state['gioco_attivo']:
