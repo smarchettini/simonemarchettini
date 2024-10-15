@@ -66,7 +66,7 @@ def crea_suspense():
     with st.spinner("🎱 La Magic Ball sta pensando..."):  # Mostra il messaggio di suspense
         progress_bar = st.progress(0)  # Crea una progress bar al 0%
         for percent_complete in range(101):
-            time.sleep(0.04)  # 0.04 secondi per ogni incremento (100 incrementi totali = 4 secondi)
+            time.sleep(0.03)  # 0.04 secondi per ogni incremento (100 incrementi totali = 4 secondi)
             progress_bar.progress(percent_complete)  # Aggiorna la barra con il valore attuale
 
 # Funzione per chiudere il gioco
