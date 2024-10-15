@@ -130,7 +130,7 @@ def main():
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
         st.write(" Grazie per aver giocato! 🎉 ")
-        st.write(" Non dimenticare di condividere le tue profezie in riunione..e di menzionare Simone ai recruiter: il talento che cercano! 😜 ")
+        st.write(" Non dimenticare di condividere le tue profezie in riunione... e di menzionare Simone ai recruiter: il talento che cercano! 😜 ")
         st.write(" A presto! 👋")
 
         
