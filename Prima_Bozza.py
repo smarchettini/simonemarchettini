@@ -12,7 +12,7 @@ if 'mostra_messaggi' not in st.session_state:
 def mostra_messaggi_con_ritardo():
     messaggio = st.empty()
     time.sleep(1)
-    messaggio.write("🎱 Benvenuto nella Magic Ball!")
+    messaggio.write("🎱 Benvenuto nella Magic 8 Ball!")
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
@@ -63,7 +63,7 @@ def suggerisci_domanda(tipo):
 
 # Funzione per creare suspense
 def crea_suspense():
-    with st.spinner("🎱 La Magic Ball sta pensando..."):  # Mostra il messaggio di suspense
+    with st.spinner("🎱 La Magic 8 Ball sta pensando..."):  # Mostra il messaggio di suspense
         progress_bar = st.progress(0)  # Crea una progress bar al 0%
         for percent_complete in range(101):
             time.sleep(0.03)  # 0.04 secondi per ogni incremento (100 incrementi totali = 4 secondi)
@@ -113,7 +113,7 @@ def main():
                 else:
                     crea_suspense()
                     risposta = random.choice(risposte_futuro)
-                    st.success(f"🎱 La Magic Ball dice: {risposta}")
+                    st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
         elif scelta == "Simone":
             domanda = st.text_input("Fai una domanda su Simone:")
@@ -123,7 +123,7 @@ def main():
                 else:
                     crea_suspense()
                     risposta = random.choice(risposte_simone)
-                    st.success(f"🎱 La Magic Ball dice: {risposta}")
+                    st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
 
         # Bottone per chiudere il gioco
         if st.button("Chiudi il gioco"):
