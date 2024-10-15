@@ -13,7 +13,33 @@ def mostra_messaggi_con_ritardo():
     time.sleep(5)
     messaggio.empty()
 
-# Liste di risposte (come prima)
+
+# Liste di risposte
+risposte_futuro = [
+    "Sì, sicuramente. 🚀",
+    "Non so, chiedi di nuovo. 🤔",
+    "Sembra improbabile. ❌",
+    "Sì. 🎉",
+    "Non contare su di esso. 😬",
+    "È certo. 🌟",
+    "Le prospettive non sono buone. 😕",
+    "Sì, in effetti. 💯",
+    "Non è il momento giusto. ⏳",
+    "Certo, perché no? 👍"
+]
+
+risposte_simone = [
+    "Non molto, ma ha un grande potenziale! 🤔",
+    "Abbastanza, ma c'è spazio per crescere! 📈",
+    "Sì, decisamente! 👍",
+    "Molto, è un valore aggiunto! 🌟",
+    "Assolutamente, non ti deluderà! 🚀"
+]
+
+# Funzione per creare suspense
+def crea_suspense():
+    with st.spinner("🎱 La Magic Ball sta pensando..."):
+        time.sleep(2)
 
 # Funzione principale
 def main():
