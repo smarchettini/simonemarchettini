@@ -46,7 +46,6 @@ risposte_simone = [
 def suggerisci_domanda(tipo):
     if tipo == "futuro":
         return [
-            "Come sarà il futuro della mia azienda?",
             "L'intelligenza artificiale cambierà il mio settore?",
             "Ci sarà una promozione per me quest'anno?",
             "La mia azienda avrà successo l'anno prossimo?",
@@ -59,7 +58,7 @@ def suggerisci_domanda(tipo):
 "Simone può tenere un discorso senza fare riferimento alla sua serie tv preferita?",
 "Simone riesce a scrivere domande divertenti senza l'aiuto di chatGPT?",
 "Simone è in grado di prevedere il futuro solo osservando le foglie di tè?",
-"Simone è può mantenere la calma anche quando il Wi-Fi non funziona?"
+"Simone può mantenere la calma anche quando il Wi-Fi non funziona?"
         ]
 
 # Funzione per creare suspense
