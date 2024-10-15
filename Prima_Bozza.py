@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import random
 
 # Funzione per mostrare i messaggi con ritardo
 def mostra_messaggi_con_ritardo():
@@ -68,19 +69,6 @@ def suggerisci_domanda(tipo):
 def crea_suspense():
     with st.spinner("🎱 La Magic Ball sta pensando..."):
         time.sleep(2)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
