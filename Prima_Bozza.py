@@ -73,7 +73,11 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("               ✨ Magic Ball ✨")
+import streamlit as st
+
+# Centralizzare il titolo
+    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
+
 
     st.write("")  # Prima riga vuota
     st.write("")  # Seconda riga vuota
