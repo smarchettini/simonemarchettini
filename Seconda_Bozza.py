@@ -119,7 +119,7 @@ def main():
         # Bottone per chiudere il gioco
         if st.button("Chiudi il gioco"):
             chiudi_gioco()  # Imposta lo stato del gioco come chiuso
-            st.experimental_rerun()  # Ricarica l'app per riflettere il cambiamento di stato
+            st.rerun()  # Ricarica l'app per riflettere il cambiamento di stato
 
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
