@@ -132,11 +132,12 @@ def main():
 
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
-        st.write(" Grazie per aver giocato! 🎉 ")
+        ritardo = st.empty()
+        ritardo.write(" Grazie per aver giocato! 🎉 ")
         time.sleep(2)
-        st.write(" Non dimenticare di condividere le tue profezie in riunione! 😉 ")
+        ritardo.write(" Non dimenticare di condividere le tue profezie in riunione! 😉 ")
         time.sleep(5)
-        st.write(" A presto! 👋")
+        ritardo.write(" A presto! 👋")
 
         
 if __name__ == "__main__":
