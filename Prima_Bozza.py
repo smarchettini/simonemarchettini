@@ -63,8 +63,11 @@ def suggerisci_domanda(tipo):
 
 # Funzione per creare suspense
 def crea_suspense():
-    with st.spinner("🎱 La Magic Ball sta pensando..."):
-        time.sleep(4)
+    with st.spinner("🎱 La Magic Ball sta pensando..."):  # Mostra il messaggio di suspense
+        progress_bar = st.progress(0)  # Crea una progress bar al 0%
+        for percent_complete in range(101):
+            time.sleep(0.04)  # 0.04 secondi per ogni incremento (100 incrementi totali = 4 secondi)
+            progress_bar.progress(percent_complete)  # Aggiorna la barra con il valore attuale
 
 # Funzione per chiudere il gioco
 def chiudi_gioco():
@@ -73,7 +76,13 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Seconda Bozza ✨")
+    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
+
+
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
 
     # Controlla se il gioco è attivo
     if st.session_state['gioco_attivo']:
