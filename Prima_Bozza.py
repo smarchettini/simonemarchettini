@@ -44,7 +44,7 @@ risposte_simone = [
 def suggerisci_domanda(tipo):
     if tipo == "futuro":
         return [
-            "L'intelligenza artificiale trasfomerà in meglio il mio settore?",
+            "L'intelligenza artificiale porterà miglioramenti nel mio settore?",
             "Ci sarà una promozione per me quest'anno?",
             "La mia azienda avrà successo l'anno prossimo?",
             "Il prossimo progetto avrà un impatto positivo sulla mia carriera?"
