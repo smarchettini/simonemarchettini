@@ -29,8 +29,6 @@ risposte_futuro = [
     "Non contare su di esso. 😬",
     "È certo. 🌟",
     "Le prospettive non sono buone. 😕",
-    "Sì, in effetti. 💯",
-    "Non è il momento giusto. ⏳",
     "Certo, perché no? 👍"
 ]
 
@@ -46,7 +44,7 @@ risposte_simone = [
 def suggerisci_domanda(tipo):
     if tipo == "futuro":
         return [
-            "L'intelligenza artificiale cambierà il mio settore?",
+            "L'intelligenza artificiale trasfomerà in meglio il mio settore?",
             "Ci sarà una promozione per me quest'anno?",
             "La mia azienda avrà successo l'anno prossimo?",
             "Il prossimo progetto avrà un impatto positivo sulla mia carriera?"
@@ -54,11 +52,10 @@ def suggerisci_domanda(tipo):
     elif tipo == "simone":
         return [
 
-"Simone è capace di fare brainstorming mentre balla il tango?",
-"Simone può tenere un discorso senza fare riferimento alla sua serie tv preferita?",
-"Simone riesce a scrivere domande divertenti senza l'aiuto di chatGPT?",
-"Simone è in grado di prevedere il futuro solo osservando le foglie di tè?",
-"Simone può mantenere la calma anche quando il Wi-Fi non funziona?"
+"Simone è abile a tenere un discorso senza fare riferimento alla sua serie TV preferita?",
+"Simone è in grado di scrivere domande divertenti senza l'aiuto di ChatGPT?",
+"Simone riesce a non perdere le staffe quando il Wi-Fi va in panne?",
+"Simone è capace di fare brainstorming mentre balla il tango?"
         ]
 
 # Funzione per creare suspense
@@ -106,7 +103,7 @@ def main():
 
         # Gestione delle domande
         if scelta == "Futuro":
-            domanda = st.text_input("Fai una domanda sul futuro:")
+            domanda = st.text_input("Fai una domanda sul tuo futuro:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
                     st.warning("Per favore, inserisci una domanda!")
@@ -116,7 +113,7 @@ def main():
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
         elif scelta == "Simone":
-            domanda = st.text_input("Fai una domanda su Simone:")
+            domanda = st.text_input("Fai una domanda sulle capacità di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
                     st.warning("Per favore, inserisci una domanda!")
