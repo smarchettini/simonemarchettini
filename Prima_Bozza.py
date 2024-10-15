@@ -92,17 +92,17 @@ def main():
         scelta = st.radio("🛣️ Scegli la tua strada:", ("🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!", "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!"))
 
         if st.button("Mostra i suggerimenti"):
-            if scelta == "Futuro":
+            if scelta == "🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!":
                 st.write("💡 Esempi di domande:")
                 for esempio in suggerisci_domanda("futuro"):
                     st.write(f"- {esempio}")
-            elif scelta == "Simone":
+            elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
                 st.write("💡 Esempi di domande:")
                 for esempio in suggerisci_domanda("simone"):
                     st.write(f"- {esempio}")
 
         # Gestione delle domande
-        if scelta == "Futuro":
+        if scelta == "🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!":
             domanda = st.text_input("Fai una domanda sul tuo futuro:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
@@ -112,7 +112,7 @@ def main():
                     risposta = random.choice(risposte_futuro)
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
-        elif scelta == "Simone":
+        elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
             domanda = st.text_input("Fai una domanda sulle capacità di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
