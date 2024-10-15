@@ -78,6 +78,16 @@ def main():
 
     scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
 
+    if st.button("Mostra i suggerimenti"):
+        if scelta == "Futuro":
+            st.write("💡 Esempi di domande:")
+            for esempio in suggerisci_domanda("futuro"):
+                st.write(f"- {esempio}")
+        elif scelta == "Simone":
+            st.write("💡 Esempi di domande:")
+            for esempio in suggerisci_domanda("simone"):
+                st.write(f"- {esempio}")
+
     # Suggerimenti per le domande
     if scelta == "Futuro":
         st.write("💡 Esempi di domande:")
