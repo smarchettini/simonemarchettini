@@ -16,7 +16,7 @@ def mostra_messaggi_con_ritardo():
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("🎱 Vorresti sapere quali sono i talenti nascosti di Simone? Chiedilo alla Magic 8 Ball!")
+    messaggio.write("🎱 Vorresti sapere quali sono i talenti nascosti di Simone a lavoro? Chiedilo alla Magic 8 Ball!")
     time.sleep(5)
     messaggio.empty()
 
@@ -35,9 +35,9 @@ risposte_futuro = [
 ]
 
 risposte_simone = [
-"È l’arte del delegare con tale grazia che sembra lui a fare tutto. 🎭",
+"L’arte del delegare con tale grazia che sembra sia lui a fare tutto. 🎭",
 "In realtà, ha semplicemente perfezionato l'arte di sembrare impegnato mentre pianifica il weekend. 🏖️",
-"La sua strategia è mescolare umorismo sottile e silenzi riflessivi: funziona sempre. 🤔",
+"Simone è abile a mescolare umorismo sottile e silenzi riflessivi: funziona sempre. 🤔",
 "La sua capacità di improvvisare è tale che gli altri pensano sia tutto pianificato. 🎩",
 "Simone sa esattamente quando annuire e quando far sembrare che stia ascoltando profondamente. 👂"
 ]
@@ -54,10 +54,10 @@ def suggerisci_domanda(tipo):
         ]
     elif tipo == "Simone":
         return [
-"Qual è il talento nascosto di Simone che nessuno in ufficio ha ancora scoperto?",
-"Come riesce Simone a risolvere i problemi senza mai sembrare preoccupato?",
-"Qual è il segreto del successo di Simone durante i meeting importanti?",
-"Quale superpotere nascosto Simone usa per gestire tutto senza sforzo?"
+"Qual è il talento di Simone?",
+"Che abilità speciale ha Simone?",
+"Qual è il segreto del successo di Simone?",
+"Quale superpotere Simone possiede?"
         ]
 
 # Funzione per creare suspense
