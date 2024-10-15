@@ -73,7 +73,13 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Seconda Bozza ✨")
+    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
+
+
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
 
     # Controlla se il gioco è attivo
     if st.session_state['gioco_attivo']:
