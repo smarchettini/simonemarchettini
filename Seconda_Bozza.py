@@ -76,7 +76,7 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball. Seconda Bozza ✨</h1>", unsafe_allow_html=True)
 
 
     st.write("")  # Prima riga vuota
