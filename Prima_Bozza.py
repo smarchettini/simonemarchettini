@@ -59,7 +59,7 @@ def suggerisci_domanda(tipo):
 # Funzione per creare suspense
 def crea_suspense():
     with st.spinner("🎱 La Magic Ball sta pensando..."):
-        time.sleep(2)
+        time.sleep(4)
 
 # Funzione principale
 def main():
