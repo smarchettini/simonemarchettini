@@ -113,7 +113,7 @@ def main():
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
         elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
-            domanda = st.text_input("Fai una domanda sulle capacità di Simone:")
+            domanda = st.text_input("Fai una domanda sulle capacità segrete di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
                     st.warning("Per favore, inserisci una domanda!")
