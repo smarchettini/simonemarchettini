@@ -16,7 +16,7 @@ def mostra_messaggi_con_ritardo():
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("🎱 Desideri conoscere Simone? Fai una domanda e svela i suoi talenti segreti!")
+    messaggio.write("🎱 Desideri conoscere le straordinarie doti di Simone? Fai una domanda e svela i suoi talenti segreti!")
     time.sleep(5)
     messaggio.empty()
 
