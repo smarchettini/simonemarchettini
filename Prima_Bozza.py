@@ -16,7 +16,7 @@ def mostra_messaggi_con_ritardo():
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("🎱 Curioso di conoscere il genio che si cela in Simone? Fai una domanda e lasciati sorprendere dalle sue capacità nascoste!")
+    messaggio.write("🎱 Curioso di conoscere il genio che si cela in Simone? Fai una domanda e lasciati sorprendere dalle sue capacità!")
     time.sleep(5)
     messaggio.empty()
 
@@ -113,7 +113,7 @@ def main():
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
         elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
-            domanda = st.text_input("Fai una domanda sulle capacità di Simone:")
+            domanda = st.text_input("Fai una domanda sulle abilità di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
                     st.warning("Per favore, inserisci una domanda!")
