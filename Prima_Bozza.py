@@ -12,11 +12,11 @@ if 'mostra_messaggi' not in st.session_state:
 def mostra_messaggi_con_ritardo():
     messaggio = st.empty()
     time.sleep(1)
-    messaggio.write("Benvenuto nella Magic Ball!")
+    messaggio.write("🎱 Benvenuto nella Magic Ball!")
     time.sleep(3)
-    messaggio.write("Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
+    messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
+    messaggio.write("🎱 Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
     time.sleep(5)
     messaggio.empty()
 
@@ -76,7 +76,7 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>🎱 Magic 8 Ball 🎱</h1>", unsafe_allow_html=True)
 
 
     st.write("")  # Prima riga vuota
@@ -113,7 +113,7 @@ def main():
                 else:
                     crea_suspense()
                     risposta = random.choice(risposte_futuro)
-                    st.success(f"🎉 La Magic Ball dice: {risposta}")
+                    st.success(f"🎱 La Magic Ball dice: {risposta}")
         
         elif scelta == "Simone":
             domanda = st.text_input("Fai una domanda su Simone:")
@@ -123,7 +123,7 @@ def main():
                 else:
                     crea_suspense()
                     risposta = random.choice(risposte_simone)
-                    st.success(f"🎉 La Magic Ball dice: {risposta}")
+                    st.success(f"🎱 La Magic Ball dice: {risposta}")
 
         # Bottone per chiudere il gioco
         if st.button("Chiudi il gioco"):
