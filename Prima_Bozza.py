@@ -16,7 +16,7 @@ def mostra_messaggi_con_ritardo():
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("🎱 Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
+    messaggio.write("🎱 Vorresti conoscere meglio Simone? Fai una domanda sulle sue capacità!")
     time.sleep(5)
     messaggio.empty()
 
@@ -35,11 +35,11 @@ risposte_futuro = [
 ]
 
 risposte_simone = [
-    "Non molto, ma ha un grande potenziale! 🤔",
-    "Abbastanza, ma c'è spazio per crescere! 📈",
+    "Non molto! 🤔",
+    "Abbastanza! 📈",
     "Sì, decisamente! 👍",
-    "Molto, è un valore aggiunto! 🌟",
-    "Assolutamente, non ti deluderà! 🚀"
+    "Molto! 🌟",
+    "Assolutamente no! 🚀"
 ]
 
 # Funzione per suggerire domande
@@ -54,11 +54,12 @@ def suggerisci_domanda(tipo):
         ]
     elif tipo == "simone":
         return [
-            "Simone è un buon lavoratore?",
-            "Simone è affidabile in team?",
-            "Simone è pronto per nuove sfide?",
-            "Simone è un candidato ideale per la mia azienda?",
-            "Simone si integra bene con il gruppo?"
+
+"Simone è capace di fare brainstorming mentre balla il tango?",
+"Simone può tenere un discorso senza fare riferimento alla sua serie tv preferita?",
+"Simone riesce a scrivere domande divertenti senza l'aiuto di chatGPT?",
+"Simone è in grado di prevedere il futuro solo osservando le foglie di tè?",
+"Simone è può mantenere la calma anche quando il Wi-Fi non funziona?"
         ]
 
 # Funzione per creare suspense
