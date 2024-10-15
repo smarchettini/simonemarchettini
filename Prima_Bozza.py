@@ -73,7 +73,7 @@ def chiudi_gioco():
 # Funzione principale
 def main():
     # Titolo dell'app
-    st.title("✨ Magic Ball! Prima Bozza ✨")
+    st.title("✨ Magic Ball ✨")
 
     st.write("")  # Prima riga vuota
     st.write("")  # Seconda riga vuota
