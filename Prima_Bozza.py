@@ -54,39 +54,37 @@ def main():
     # Titolo dell'app
     st.title("✨ Magic Ball! Prima Bozza✨")
 
-    st.write("")  # Righe vuote per spaziatura
-    st.write("")
+    # Mostra i messaggi iniziali
+    mostra_messaggi_con_ritardo()
 
-    # Mostra i messaggi solo una volta, al click del bottone
-    if st.button("Mostra i messaggi introduttivi"):
-        mostra_messaggi_con_ritardo()
+    # Spazio vuoto per separare i messaggi iniziali dalla scelta
+    st.write("")  # Crea uno spazio vuoto
     
-    st.write("")  # Spazio vuoto dopo i messaggi
+    # Scelta dell'azione in una schermata separata
+    scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
 
-    # Avvia l'interazione solo dopo aver mostrato i messaggi
-    if st.button("Avvia Interazione"):
-        # Scelta dell'azione
-        scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
-
-        if scelta == "Futuro":
-            domanda = st.text_input("Fai una domanda sul futuro:")
-            if st.button("Chiedi alla Magic Ball"):
-                if domanda.strip() == "":
-                    st.warning("Per favore, inserisci una domanda!")
-                else:
-                    crea_suspense()
-                    risposta = random.choice(risposte_futuro)
-                    st.success(f"🎉 La Magic Ball dice: {risposta}")
-
-        elif scelta == "Simone":
-            domanda = st.text_input("Fai una domanda su Simone:")
-            if st.button("Chiedi alla Magic Ball"):
-                if domanda.strip() == "":
-                    st.warning("Per favore, inserisci una domanda!")
-                else:
-                    crea_suspense()
-                    risposta = random.choice(risposte_simone)
-                    st.success(f"🎉 La Magic Ball dice: {risposta}")
+    # Suggerimenti per le domande
+    if scelta == "Futuro":
+        domanda = st.text_input("Fai una domanda sul futuro:")
+        
+        if st.button("Chiedi alla Magic Ball"):
+            if domanda.strip() == "":
+                st.warning("Per favore, inserisci una domanda!")
+            else:
+                crea_suspense()
+                risposta = random.choice(risposte_futuro)
+                st.success(f"🎉 La Magic Ball dice: {risposta}")
+    
+    elif scelta == "Simone":
+        domanda = st.text_input("Fai una domanda su Simone:")
+        
+        if st.button("Chiedi alla Magic Ball"):
+            if domanda.strip() == "":
+                st.warning("Per favore, inserisci una domanda!")
+            else:
+                crea_suspense()
+                risposta = random.choice(risposte_simone)
+                st.success(f"🎉 La Magic Ball dice: {risposta}")
 
 if __name__ == "__main__":
     main()
