@@ -75,6 +75,11 @@ def main():
     # Titolo dell'app
     st.title("✨ Magic Ball! Seconda Bozza ✨")
 
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
+    st.write("")  # Prima riga vuota
+    st.write("")  # Seconda riga vuota
+
     # Controlla se il gioco è attivo
     if st.session_state['gioco_attivo']:
         # Mostra i messaggi iniziali solo una volta
