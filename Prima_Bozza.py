@@ -132,7 +132,7 @@ def main():
 
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
-        st.write(" Grazie per aver giocato! 🎉 Non dimenticare di condividere il tuo destino in riunione! 😉   A presto! 👋")
+        st.write(" Grazie per aver giocato! 🎉 Non dimenticare di condividere le tue profezie in riunione in riunione! 😉 A presto! 👋")
 
 if __name__ == "__main__":
     main()
