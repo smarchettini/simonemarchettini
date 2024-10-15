@@ -63,7 +63,7 @@ def crea_suspense():
 
 # Funzione principale
 def main():
-    st.title("✨ Magic Ball! Prima Bozza ✨")
+    st.title("✨ Magic Ball! Seconda Bozza ✨")
 
     st.write("")  # Prima riga vuota
     st.write("")  # Seconda riga vuota
