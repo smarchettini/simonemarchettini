@@ -72,15 +72,8 @@ def chiudi_gioco():
 
 # Funzione principale
 def main():
-
-# Centralizzare il titolo
-    st.markdown("<h1 style='text-align: center;'>✨ Magic Ball ✨</h1>", unsafe_allow_html=True)
-
-
-    st.write("")  # Prima riga vuota
-    st.write("")  # Seconda riga vuota
-    st.write("")  # Prima riga vuota
-    st.write("")  # Seconda riga vuota
+    # Titolo dell'app
+    st.title("✨ Magic Ball! Seconda Bozza ✨")
 
     # Controlla se il gioco è attivo
     if st.session_state['gioco_attivo']:
@@ -90,7 +83,7 @@ def main():
             st.session_state['mostra_messaggi'] = True
 
         # Spazio per scegliere cosa chiedere
-        scelta = st.radio("Scegli cosa chiedere:", ("🔮 Futuro", "💼 Simone"))
+        scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
 
         if st.button("Mostra i suggerimenti"):
             if scelta == "Futuro":
@@ -130,7 +123,7 @@ def main():
 
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
-        st.write("Grazie per aver giocato! A presto! 👋")
+        st.write("Grazie per aver giocato! 🎉")
 
 if __name__ == "__main__":
     main()
