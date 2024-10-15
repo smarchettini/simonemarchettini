@@ -64,7 +64,9 @@ def suggerisci_domanda(tipo):
 # Funzione per creare suspense
 def crea_suspense():
     with st.spinner("🎱 La Magic Ball sta pensando..."):
-        time.sleep(4)
+        for i in range(4):
+            time.sleep(1)
+            st.progress(i + 1)
 
 # Funzione per chiudere il gioco
 def chiudi_gioco():
@@ -90,7 +92,7 @@ def main():
             st.session_state['mostra_messaggi'] = True
 
         # Spazio per scegliere cosa chiedere
-        scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+        scelta = st.radio("Scegli cosa chiedere:", ("🔮 Futuro", "💼 Simone"))
 
         if st.button("Mostra i suggerimenti"):
             if scelta == "Futuro":
