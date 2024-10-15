@@ -112,7 +112,7 @@ def main():
                     risposta = random.choice(risposte_futuro)
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
-        elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
+        elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue capacità!":
             domanda = st.text_input("Fai una domanda sulle abilità di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
