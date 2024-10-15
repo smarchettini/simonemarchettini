@@ -74,16 +74,7 @@ def crea_suspense():
 
 # Funzione principale
 def main():
-    # Titolo dell'app
-    st.title("✨ Magic Ball! Prima Bozza✨")
 
-    st.write("")  # Prima riga vuota
-    st.write("")  # Seconda riga vuota
-    st.write("")  # Prima riga vuota
-    st.write("")  # Seconda riga vuota
-
-    # Mostra i messaggi iniziali
-    mostra_messaggi_con_ritardo()
 
     # Spazio vuoto per separare i messaggi iniziali dalla scelta
     st.write("")  # Crea uno spazio vuoto
@@ -121,6 +112,15 @@ def main():
                     crea_suspense()
                     risposta = random.choice(risposte_simone)
                     st.success(f"🎉 La Magic Ball dice: {risposta}")
+# Titolo dell'app
+st.title("✨ Magic Ball! Prima Bozza✨")
 
+st.write("")  # Prima riga vuota
+st.write("")  # Seconda riga vuota
+st.write("")  # Prima riga vuota
+st.write("")  # Seconda riga vuota
+
+# Mostra i messaggi iniziali
+mostra_messaggi_con_ritardo()
 if __name__ == "__main__":
     main()
