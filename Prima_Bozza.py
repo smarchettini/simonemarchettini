@@ -14,11 +14,11 @@ def mostra_messaggi_con_ritardo():
 
     # Mostra il primo messaggio e aspetta 3 secondi
     messaggio.write("Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
-    time.sleep(6)
+    time.sleep(5)
 
     # Mostra il secondo messaggio e aspetta 3 secondi
     messaggio.write("Vorresti conoscere meglio Simone e le sue capacità lavorative? Fai una domanda su di lui!")
-    time.sleep(6)
+    time.sleep(5)
 
     # Pulisci lo spazio
     messaggio.empty()  # Rimuove il contenuto precedente
