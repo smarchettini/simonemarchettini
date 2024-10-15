@@ -16,7 +16,7 @@ def mostra_messaggi_con_ritardo():
     time.sleep(3)
     messaggio.write("🎱 Vuoi scoprire cosa il destino ha in serbo per te? Fai una domanda sul futuro!")
     time.sleep(5)
-    messaggio.write("🎱 Vorresti conoscere meglio Simone? Fai una domanda sulle sue capacità!")
+    messaggio.write("🎱 Curioso di conoscere il genio che si cela in Simone? Fai una domanda e lasciati sorprendere dalle sue capacità nascoste!")
     time.sleep(5)
     messaggio.empty()
 
@@ -89,7 +89,7 @@ def main():
             st.session_state['mostra_messaggi'] = True
 
         # Spazio per scegliere cosa chiedere
-        scelta = st.radio("Scegli cosa chiedere:", ("Futuro", "Simone"))
+        scelta = st.radio("🛣️ Scegli la tua strada:", ("🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!", "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!"))
 
         if st.button("Mostra i suggerimenti"):
             if scelta == "Futuro":
