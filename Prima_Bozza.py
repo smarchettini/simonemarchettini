@@ -5,7 +5,7 @@ import time
 def mostra_messaggi_con_ritardo():
     # Mostra il messaggio di benvenuto
     messaggio = st.empty()
-    time.sleep(2)
+    time.sleep(1)
 
 
     messaggio.write("Benvenuto nella Magic Ball!")
