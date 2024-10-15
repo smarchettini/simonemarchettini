@@ -49,7 +49,7 @@ def suggerisci_domanda(tipo):
             "L'intelligenza artificiale cambierà il mio settore?",
             "Ci sarà una promozione per me quest'anno?",
             "La mia azienda avrà successo l'anno prossimo?",
-            "Il prossimo progetto avrà un impatto positivo?"
+            "Il prossimo progetto avrà un impatto positivo sulla mia carriera?"
         ]
     elif tipo == "simone":
         return [
