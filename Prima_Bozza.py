@@ -22,29 +22,29 @@ def mostra_messaggi_con_ritardo():
 
 # Liste di risposte
 risposte_futuro = [
-    "Sì, sicuramente. 🚀",
-    "Non so, chiedi di nuovo. 🤔",
-    "Sembra improbabile. ❌",
-    "Sì. 🎉",
-    "Non contare su di esso. 😬",
-    "È certo. 🌟",
-    "Le prospettive non sono buone. 😕",
-    "Certo, perché no? 👍"
+    "Sì, sicuramente.",
+    "Non so, chiedi di nuovo.",
+    "Sembra improbabile.",
+    "Forse.",
+    "Probabilmente no.",
+    "È certo.",
+    "È impossibile.",
 ]
 
 risposte_simone = [
-    "Non molto! 🤔",
-    "Abbastanza! 📈",
-    "Sì, decisamente! 👍",
-    "Molto! 🌟",
-    "Assolutamente no! 🚀"
+    "Non ne sono sicuro, prova a rifare la domanda.",
+    "Non molto!",
+    "Abbastanza!",
+    "Sì, decisamente!",
+    "Molto!",
+    "Assolutamente no!"
 ]
 
 # Funzione per suggerire domande
 def suggerisci_domanda(tipo):
     if tipo == "futuro":
         return [
-            "L'intelligenza artificiale porterà miglioramenti nel mio settore?",
+            "L'intelligenza artificiale trasformerà il mio settore?",
             "Ci sarà una promozione per me quest'anno?",
             "La mia azienda avrà successo l'anno prossimo?",
             "Il prossimo progetto avrà un impatto positivo sulla mia carriera?"
@@ -96,14 +96,14 @@ def main():
                 st.write("💡 Esempi di domande:")
                 for esempio in suggerisci_domanda("futuro"):
                     st.write(f"- {esempio}")
-            elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
+            elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità nascoste!":
                 st.write("💡 Esempi di domande:")
                 for esempio in suggerisci_domanda("simone"):
                     st.write(f"- {esempio}")
 
         # Gestione delle domande
         if scelta == "🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!":
-            domanda = st.text_input("Fai una domanda sul tuo futuro:")
+            domanda = st.text_input("Fai una domanda sul futuro:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
                     st.warning("Per favore, inserisci una domanda!")
@@ -112,7 +112,7 @@ def main():
                     risposta = random.choice(risposte_futuro)
                     st.success(f"🎱 La Magic 8 Ball dice: {risposta}")
         
-        elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!":
+        elif scelta == "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità nascoste!":
             domanda = st.text_input("Fai una domanda sulle capacità segrete di Simone:")
             if st.button("Chiedi alla Magic Ball"):
                 if domanda.strip() == "":
@@ -130,7 +130,7 @@ def main():
     else:
         # Se il gioco è chiuso, mostra solo il messaggio di ringraziamento
         st.write(" Grazie per aver giocato! 🎉 ")
-        st.write(" Non dimenticare di condividere le tue profezie in riunione... e di menzionare Simone ai recruiter: il talento che cercano! 😜 ")
+        st.write(" Non dimenticare di condividere le tue profezie in riunione... e di menzionare Simone ai recruiter: il talento che cercano! 💼🚀")
         st.write(" A presto! 👋")
 
         
