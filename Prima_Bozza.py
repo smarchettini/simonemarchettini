@@ -89,7 +89,7 @@ def main():
             st.session_state['mostra_messaggi'] = True
 
         # Spazio per scegliere cosa chiedere
-        scelta = st.radio("🛣️ Scegli la tua strada:", ("🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!", "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità!"))
+        scelta = st.radio("🛣️ Scegli la tua strada:", ("🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!", "🤹‍♂️ Simone: Esplora il mondo affascinante delle sue abilità nascoste!"))
 
         if st.button("Mostra i suggerimenti"):
             if scelta == "🔮 Futuro: Scopri cosa ti attende oltre l'orizzonte!":
